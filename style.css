@@ -1,0 +1,178 @@
+/* css reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* css reset */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* ### Neutral */
+
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+/* font-family: 'Big Shoulders Display', cursive; */
+/* font-family: 'Lexend Deca', sans-serif; */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.938rem;
+}
+/* color background */
+
+.bg-orange { background-color: var(--Bright-orange);}
+.bg-cyan { background-color: var(--Dark-cyan);}
+.bg-v-d-cyan { background-color: var(--Very-dark-cyan);}
+
+/* text */
+.card-heading { 
+  color: var(--Very-light-gray);
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.card-detials { 
+  color: var(--Transparent-white);
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 400;
+}
+
+/* button-color */
+.btn-orange { color: var(--Bright-orange);}
+.btn-cyan { color: var(--Dark-cyan);}
+.btn-v-d-cyan { color: var(--Very-dark-cyan);}
+
+
+.container {
+    display: grid;
+    place-content: center;
+    margin: 5rem 2rem;
+    border-radius: 0.7rem;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.5rem;
+    gap: 1.8rem;
+}
+
+.btn {
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.btn-orange:hover { 
+  background-color: var(--Bright-orange);
+  color: var(--Transparent-white);
+  border: 1px solid var(--Very-light-gray);
+}
+.btn-cyan:hover { 
+  background-color: var(--Dark-cyan);
+  color: var(--Transparent-white);
+  border: 1px solid var(--Very-light-gray)
+}
+.btn-v-d-cyan:hover { 
+  background-color: var(--Very-dark-cyan);
+  color: var(--Transparent-white);
+  border: 1px solid var(--Very-light-gray)
+}
+
+@media (min-width:600px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 19rem ;
+    }
+    .card {
+        padding-inline: 3.5rem;
+        min-height: 70vh;
+    }
+    .btn{
+      margin-top: 5rem;
+    }
+}
