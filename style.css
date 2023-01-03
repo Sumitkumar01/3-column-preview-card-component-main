@@ -107,14 +107,12 @@ body {
 /* text */
 .card-heading { 
   color: var(--Very-light-gray);
-  font-family: 'Lexend Deca', sans-serif;
-  font-weight: 700;
+  font-family: 'Big Shoulders Display', sans-serif;
   text-transform: uppercase;
 }
 .card-detials { 
   color: var(--Transparent-white);
-  font-family: 'Big Shoulders Display', cursive;
-  font-weight: 400;
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 /* button-color */
@@ -140,27 +138,39 @@ body {
 }
 
 .btn {
-    border: none;
+    border: 0.125rem solid var(--Very-light-gray);
     border-radius: 1.5rem;
-    padding: 0.5rem 1.5rem;
+    background-color: var(--Very-light-gray);
+    padding: 0.8rem 1.9rem;
     cursor: pointer;
     font-family: 'Lexend Deca', sans-serif;
+    margin-top: auto;
+    text-decoration: none;
 }
 
 .btn-orange:hover { 
   background-color: var(--Bright-orange);
   color: var(--Transparent-white);
-  border: 1px solid var(--Very-light-gray);
 }
 .btn-cyan:hover { 
   background-color: var(--Dark-cyan);
   color: var(--Transparent-white);
-  border: 1px solid var(--Very-light-gray)
 }
 .btn-v-d-cyan:hover { 
   background-color: var(--Very-dark-cyan);
   color: var(--Transparent-white);
-  border: 1px solid var(--Very-light-gray)
+}
+/* Components */
+.sr-only {
+  position: absolute;
+  width: 0.063rem;
+  height: 0.063rem;
+  padding: 0;
+  margin: -0.063rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 @media (min-width:600px) {
@@ -172,7 +182,5 @@ body {
         padding-inline: 3.5rem;
         min-height: 70vh;
     }
-    .btn{
-      margin-top: 5rem;
-    }
+   
 }
